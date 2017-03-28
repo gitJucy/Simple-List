@@ -1,6 +1,7 @@
 
 $(function(){
-
+  function myFunction() {
+      var x = document.getElementById("input").required;}
   var $todos = $('#todo-list');
   var $input = $('#input');
   var $done =$('#done-list');
@@ -11,7 +12,10 @@ $(function(){
   "</li>";
 
   function addTodo(todo){
+
+
     $todos.append(Mustache.render(itemTemplate1, todo)) ;
+      $("#form1").trigger("reset");
   }
   $.ajax({
       type: 'GET',
@@ -54,9 +58,4 @@ $todos.delegate( '.done', 'click' , function(){
   });
 });
 
-});
-(function(){
-  document.getElementById('input-button').click(function(){
-    document.getElementsByClassName('input').reset();
-  });
 });
