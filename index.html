@@ -9,6 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css"  rel="stylesheet">
+    <link href="vendor\google\css\fonts.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,29 +21,25 @@
   </head>
   <body>
   <div class="container input-field">
-      <h1 class="text-center">What To Do?</h1>
-      <div class="input-group">
-        <input type="text" class="form-control "id="input" placeholder="What's the activity?..."/>
-          <span id="input-button" role="button"class=" input-group-addon  btn glyphicon-plus "></span>
-
+      <h1 class="text-center">Do Work</h1>
+      <form id="form1">
+      <div class="input-group form-group">
+        <input type="text" maxlength="80" required class="form-control text-field "id="input" placeholder="What needs to be done?..."/>
+          <span id="input-button" role="button" class=" input-group-addon  btn glyphicon-plus "></span>
       </div><!-- /input-group -->
-     </div><!--container-->
-  <div class="container todo-wrapper">
-      <h3 class="text-center">Coming Up</h2>
-        <ul class="list-unstyled text-center"id="todo-list"> </ul>
-  </div><!--todo container-->
+    </form>
     <hr />
-  <div class="container done-wrapper">
-    <h3 class="text-center">Already Done</h2>
-    <ul id="done-list"> </ul>
-  </div><!--done container-->
 
+  </div><!--container-->
+  <div class="container todo-wrapper">
+        <ul class="list-unstyled text-center holder"id="todo-list"> </ul>
+  </div><!--todo container-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- <script src="vendor/jquery/jquery3.2.0.min.js"></script> -->
     <script src="main.js"></script>
-    <script src="mustache.js"></script>
+    <script src="assets/mustache.js"></script>
   </body>
 </html>
