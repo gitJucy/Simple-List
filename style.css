@@ -43,8 +43,8 @@ li{
   list-style-position: outside;
   white-space: nowrap;
   overflow:  scroll;
-  /*text-overflow: ellipsis;*/
   list-style-position: inside;
+  
 }
 .li-wrap{
   margin:0px;
