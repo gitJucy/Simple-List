@@ -44,7 +44,7 @@ li{
   white-space: nowrap;
   overflow:  scroll;
   list-style-position: inside;
-  
+
 }
 .li-wrap{
   margin:0px;
@@ -72,7 +72,7 @@ li::-webkit-scrollbar {
   padding:0px;
   display:block;
   position:fixed;
-  right:10%;
+  right:25%;
 
 
 }
