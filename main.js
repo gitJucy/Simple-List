@@ -1,19 +1,17 @@
 
 $(function(){
+
   var $todos = $('#todo-list');
   var $input = $('#input');
-  var itemTemplate1 =" " +
+
+  var itemTemplate =" " +
   "<li>"+
-  "<div class='li-wrap'>{{content}}"+
-  "<div class='container butt'><button data-id='{{id}}' class=' done glyphicon glyphicon-ok'></button></div></div>"+
+  "{{content}}  "+
+  "<button data-id='{{id}}' class='done'>done!</button>"+
   "</li>";
 
   function addTodo(todo){
-
-    $todos.append(Mustache.render(itemTemplate1, todo)) ;
-
-      $("#form1").trigger("reset");
-
+    $todos.append(Mustache.render(itemTemplate, todo));
   }
   $.ajax({
       type: 'GET',
@@ -28,6 +26,7 @@ $(function(){
       }
     });
       $('#input-button').on ( 'click' , function(){
+
           var todo ={
           content:$input.val()
         };
@@ -43,13 +42,14 @@ $(function(){
           }
       });
   });
+
 $todos.delegate( '.done', 'click' , function(){
   var $li =$(this).closest ('li');
   $.ajax({
     type: 'DELETE'  ,
     url: 'http://rest.learncode.academy/api/:lucy/:todo-items/' + $(this).attr('data-id'),
     success: function(){
-      $li.fadeOut(400, function(){
+      $li.fadeOut(600, function(){
         $(this).remove() ;
       });
     }
