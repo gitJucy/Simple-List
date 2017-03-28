@@ -1,21 +1,19 @@
 
 $(function(){
-  function myFunction() {
-      var x = document.getElementById("input").required;}
   var $todos = $('#todo-list');
   var $input = $('#input');
-  var $done =$('#done-list');
   var itemTemplate1 =" " +
   "<li>"+
   "<div class='li-wrap'>{{content}}"+
-  "<div class='container butt'><button data-id='{{id}}' class=' done glyphicon glyphicon-ok'></button></div>"+
+  "<div class='container butt'><button data-id='{{id}}' class=' done glyphicon glyphicon-ok'></button></div></div>"+
   "</li>";
 
   function addTodo(todo){
 
-
     $todos.append(Mustache.render(itemTemplate1, todo)) ;
+
       $("#form1").trigger("reset");
+
   }
   $.ajax({
       type: 'GET',

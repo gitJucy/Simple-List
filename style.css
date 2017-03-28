@@ -27,20 +27,34 @@ h1{
   color:rgb(9,187,0);
   font-size: 2.5em;
   font-weight: bold;
+  height:inherit;
 
 }
-
+.btn:hover{
+  color:rgb(34,212,25);
+}
 li{
-color:rgb(255,255,255);
-border-radius:25px;
-background-color: rgba(250,250,250, 0.3);
-padding:10px;
-margin:10px;
-font-size:1.5em;
+  color:rgb(255,255,255);
+  border-radius:25px;
+  background-color: rgba(250,250,250, 0.3);
+  padding:10px 0px 10px 10px;
+  margin:10px;
+  font-size:1.5em;
+  list-style-position: outside;
+  white-space: nowrap;
+  overflow:  scroll;
+  /*text-overflow: ellipsis;*/
+  list-style-position: inside;
 }
 .li-wrap{
   margin:0px;
+  max-width:800px;
+  display:inline;
 }
+li::-webkit-scrollbar {
+  width: 0;
+}
+
 .glyphicon-ok{
   color:rgb(9,187,0);
   background:transparent;
@@ -48,7 +62,17 @@ font-size:1.5em;
   border-radius: 50px;
   float:right;
 }
+.glyphicon-ok:hover,
+.glyphicon-ok:focus{
+  color:rgb(34,212,25);
+}
 .butt{
   float:right;
-  max-width: 50px;
+  width: 50px;
+  padding:0px;
+  display:block;
+  position:fixed;
+  right:10%;
+
+
 }
