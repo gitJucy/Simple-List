@@ -4,8 +4,8 @@ $(function(){
   var $input = $('#input');
   var itemTemplate1 =" " +
   "<li>"+
-  "<div class='li-wrap'>{{content}}"+
-  "<div class='container butt'><button data-id='{{id}}' class=' done glyphicon glyphicon-ok'></button></div></div>"+
+  "<div class='container content'>{{content}}</div>"+
+  "<div class='container butt'><button data-id='{{id}}' class='done btn glyphicon glyphicon-remove'></button></div>"+
   "</li>";
 
   function addTodo(todo){
