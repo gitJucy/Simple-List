@@ -17,7 +17,7 @@ $(function(){
   }
   $.ajax({
       type: 'GET',
-      url:'https://rest.learncode.academy/api/:lucy/:todo-items/',
+      url:'http://rest.learncode.academy/api/:lucy/:todo-items/',
       success: function(todos) {
         $.each(todos,  function(i, todo) {
           addTodo(todo);
@@ -47,7 +47,7 @@ $todos.delegate( '.done', 'click' , function(){
   var $li =$(this).closest ('li');
   $.ajax({
     type: 'DELETE'  ,
-    url: 'https://rest.learncode.academy/api/:lucy/:todo-items/' + $(this).attr('data-id'),
+    url: 'http://rest.learncode.academy/api/:lucy/:todo-items/' + $(this).attr('data-id'),
     success: function(){
       $li.fadeOut(400, function(){
         $(this).remove() ;
