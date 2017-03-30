@@ -8,6 +8,9 @@ h1{
   color: rgb(230,230,230);
   font-weight:bold;
   text-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+}
+.input-field{
+  position:static;
 
 }
 .input-group,
@@ -15,7 +18,6 @@ h1{
   height:60px;
   border-top-left-radius: 30px;
   border-bottom-left-radius:30px;
-
 }
 .form-control {
   color: rgba(0,0,0,0.8);
@@ -48,9 +50,12 @@ h1{
   font-size:3em;
   font-weight: bolder;
 }
+.todo-wrapper{
+  position:relative;
+}
 li{
   height:60px;
-  position: relative;
+  position: static;
   color:rgb(255,255,255);
   max-height:60px;
   border-radius: 30px;
@@ -106,22 +111,7 @@ max-width:200px;
   width: 50px;
   height:50px;
   display:block;
-  position:fixed;
+  position:absolute;
   right:50px;
   margin-left: 60px;
-}
-/*@media(min-width:1024px){
-  .butt{
-    right:10%;
-  }
-}*/
-@media(min-width: 1024px){
-  .butt{
-    margin-right:2%;
-  }
-  @media(min-width: 1440px;){
-    .butt{
-      right: 15%;
-    }
-  }
 }
