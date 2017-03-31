@@ -49,7 +49,7 @@ $todos.delegate( '.done', 'click' , function(){
     type: 'DELETE'  ,
     url: 'http://rest.learncode.academy/api/:lucy/:todo-items/' + $(this).attr('data-id'),
     success: function(){
-      $li.fadeOut(400, function(){
+      $li.fadeOut(300, function(){
         $(this).remove() ;
       });
     }
