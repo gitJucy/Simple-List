@@ -17,7 +17,7 @@ $(function(){
   }
   $.ajax({
       type: 'GET',
-      url:'https://api.myjson.com/bins/c8q5f',
+      url:'https://quarkbackend.com/getfile/gitjucy/simplelist',
       success: function(todos) {
         $.each(todos,  function(i, todo) {
           addTodo(todo);
@@ -33,7 +33,7 @@ $(function(){
         };
         $.ajax({
           type:'POST',
-          url:'https://api.myjson.com/bins/c8q5f',
+          url:'https://quarkbackend.com/getfile/gitjucy/simplelist',
           data: todo,
           success: function(newTodo){
             addTodo(newTodo);
@@ -47,7 +47,7 @@ $todos.delegate( '.done', 'click' , function(){
   var $li =$(this).closest ('li');
   $.ajax({
     type: 'DELETE'  ,
-    url:'https://api.myjson.com/bins/c8q5f' + $(this).attr('data-id'),
+    url:'https://quarkbackend.com/getfile/gitjucy/simplelist' + $(this).attr('data-id'),
     success: function(){
       $li.fadeOut(400, function(){
         $(this).remove() ;
