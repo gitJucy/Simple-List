@@ -17,7 +17,7 @@ $(function(){
   }
   $.ajax({
       type: 'GET',
-      url:'https://rest.learncode.academy/api/:lucy/:todo-items/',
+      url:'https://api.myjson.com/bins/c8q5f',
       success: function(todos) {
         $.each(todos,  function(i, todo) {
           addTodo(todo);
@@ -33,7 +33,7 @@ $(function(){
         };
         $.ajax({
           type:'POST',
-          url:'http://rest.learncode.academy/api/:lucy/:todo-items/',
+          url:'https://api.myjson.com/bins/c8q5f',
           data: todo,
           success: function(newTodo){
             addTodo(newTodo);
@@ -47,7 +47,7 @@ $todos.delegate( '.done', 'click' , function(){
   var $li =$(this).closest ('li');
   $.ajax({
     type: 'DELETE'  ,
-    url: 'https://rest.learncode.academy/api/:lucy/:todo-items/' + $(this).attr('data-id'),
+    url:'https://api.myjson.com/bins/c8q5f' + $(this).attr('data-id'),
     success: function(){
       $li.fadeOut(400, function(){
         $(this).remove() ;
